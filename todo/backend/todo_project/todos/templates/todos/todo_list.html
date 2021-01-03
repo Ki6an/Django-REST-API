@@ -1,0 +1,7 @@
+<h1>Todo List</h1>
+{% for todo in object_list %}
+<ul>
+    <li>Title: {{ todo.title }}</li>
+    <li>Body: {{ todo.body }}</li>
+</ul>
+{% endfor %}
