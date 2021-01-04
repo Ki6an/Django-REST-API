@@ -1,0 +1,11 @@
+<h1>Blogs List</h1>
+{% for posts in object_list %}
+<ul>
+    <li>Author: {{ posts.author }}</li>
+    <li>Title: {{ posts.title }}</li>
+    <li>Body: {{ posts.body }}</li>
+    <li>Created Date: {{ posts.created_at }}</li>
+    <li>Updated Date: {{ posts.updated_at }}</li>
+
+</ul>
+{% endfor %}
