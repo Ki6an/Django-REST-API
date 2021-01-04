@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from posts.models import Post
+from django.contrib.auth import get_user_model
 
 
 class PostSerializer(serializers.ModelSerializer):
@@ -9,4 +10,13 @@ class PostSerializer(serializers.ModelSerializer):
         model = Post
 
         fields = ('id', 'author', 'title', 'body',
-                  'created_at', 'updated_at')  # to add custom fields
+                  'created_at', 'updated_at',)  # to add custom fields
+
+
+class UserSerializer(serializers.ModelSerializer):
+
+    class Meta:
+
+        model = get_user_model()
+
+        fields = ('id', 'username',)
